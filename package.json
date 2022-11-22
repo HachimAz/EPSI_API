@@ -1,0 +1,16 @@
+{
+  "name": "capgemini-express-api",
+  "version": "1.0.0",
+  "description": "Ma première API",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Hachim",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
