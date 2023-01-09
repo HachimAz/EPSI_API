@@ -1,16 +1,7 @@
 //const express = require("express");
 import express from "express";
 const app = express();
-const contacts = [
-  {
-    nom: "HACH",
-    tele: "06066006",
-  },
-  {
-    nom: "AZZ",
-    tele: "333333",
-  },
-];
+import { contacts } from "./data.js";
 
 //La route
 app.get("/", function (req, res) {
