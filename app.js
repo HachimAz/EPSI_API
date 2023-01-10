@@ -1,5 +1,6 @@
 //const express = require("express");
 import express from "express";
+import * as controller from "./controllers/contactController.js";
 const app = express();
 import { contacts } from "./data.js";
 
@@ -10,14 +11,9 @@ app.get("/", function (req, res) {
 
 // Modifer la route
 
-app.get("/api/contacts", function (req, res) {
-  res.status(200).json(contacts);
-});
+app.get("/api/contacts", controller.getContacts);
 
-app.get("/api/contacts/:id", function (req, res) {
-  const id = req.params.id;
-  res.status(200).json({ id });
-});
+app.get("/api/contact/:id", controller.getContact);
 
 //Pour l'export dans Comon JS c'est pas comeme dans ES6
 export default app;

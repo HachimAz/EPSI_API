@@ -17,6 +17,7 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.20.11",
     "eslint": "^8.31.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
