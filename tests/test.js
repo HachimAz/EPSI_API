@@ -52,3 +52,17 @@ describe("Check the contact don't exist  ", () => {
       });
   });
 });
+
+describe("Insert a new contact  ", () => {
+  test("It should response to the post method ", () => {
+    request(app)
+      // Make POST Request
+      .post("/api/newContact/")
+      .send({ id: "3", nom: "AZAD", tele: "06161616" })
+      .then((res) => {
+        expect(res.body.id).toBe("3");
+        expect(res.body.nom).toBe("AZAD");
+        expect(res.body.tele).toBe("06161616");
+      });
+  });
+});
