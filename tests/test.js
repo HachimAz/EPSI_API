@@ -1,6 +1,10 @@
 import request from "supertest";
 import app from "../app.js";
 
+jest.mock("nanoid", () => {
+  return { nanoid: () => "1234" };
+});
+
 describe("Test the root path ", () => {
   test("It should response to the get method ", () => {
     request(app)

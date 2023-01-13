@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for capgemini-express-api/controllers/contactController.js</title>
+    <title>Code coverage report for capgemini-express-api/service.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../../prettify.css" />
-    <link rel="stylesheet" href="../../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../../sort-arrow-sprite.png);
+            background-image: url(../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">capgemini-express-api/controllers</a> contactController.js</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">capgemini-express-api</a> service.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>0/7</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/3</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
@@ -88,17 +88,10 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a>
-<a name='L27'></a><a href='#L27'>27</a>
-<a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,48 +101,40 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//import { contacts } from "../data.js";
-import * as service from "../service.js";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//  nanoid generate id for us
+import { nanoid } from "nanoid";
+//inmport contact to avoid contact with the data file
+import { contacts } from "./data.js";
 &nbsp;
-function <span class="fstat-no" title="function not covered" >getContacts(</span>req, res) {
-  const contacts = <span class="cstat-no" title="statement not covered" >service.getContacts();</span>
-<span class="cstat-no" title="statement not covered" >  res.status(200).json(contacts);</span>
+// To get all contact
+function <span class="fstat-no" title="function not covered" >getContacts(</span>) {
+<span class="cstat-no" title="statement not covered" >  return contacts;</span>
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >getContact(</span>req, res) {
-  const id = <span class="cstat-no" title="statement not covered" >req.params.id;</span>
-&nbsp;
-  // normal without using service
-  // const contact = contacts.find((user) =&gt; user.id === id);
-&nbsp;
-  const contact = <span class="cstat-no" title="statement not covered" >service.getContact(id);</span>
-<span class="cstat-no" title="statement not covered" >  res.status(200).json(contact);</span>
+//get contact by id
+function <span class="fstat-no" title="function not covered" >getContact(</span>id) {
+<span class="cstat-no" title="statement not covered" >  return contacts.find(<span class="fstat-no" title="function not covered" >(c</span>ontact) =&gt; <span class="cstat-no" title="statement not covered" >contact.id === id)</span>;</span>
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >newContact(</span>req, res) {
-  // const data = {
-  const nom = <span class="cstat-no" title="statement not covered" >req.body.nom;</span>
-  const tele = <span class="cstat-no" title="statement not covered" >req.body.tele;</span>
-  // };
+// Push the newContact to my contacts Array
 &nbsp;
-  const newContact = <span class="cstat-no" title="statement not covered" >service.newContact(nom, tele);</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >  res.status(201).json(newContact);</span>
+function <span class="fstat-no" title="function not covered" >newContact(</span>nom, tele) {
+  const id = <span class="cstat-no" title="statement not covered" >nanoid();</span>
+  const newContact = <span class="cstat-no" title="statement not covered" >{ id, nom, tele };</span>
+<span class="cstat-no" title="statement not covered" >  contacts.push(newContact);</span>
+<span class="cstat-no" title="statement not covered" >  return newContact;</span>
 }
 &nbsp;
 export { getContacts, getContact, newContact };
@@ -162,14 +147,14 @@ export { getContacts, getContact, newContact };
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2023-01-13T14:17:47.491Z
             </div>
-        <script src="../../prettify.js"></script>
+        <script src="../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../../sorter.js"></script>
-        <script src="../../block-navigation.js"></script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
     </body>
 </html>
     

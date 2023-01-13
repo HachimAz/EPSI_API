@@ -20,7 +20,7 @@ app.get("/api/contacts", controller.getContacts);
 
 app.get("/api/contact/:id", controller.getContact);
 
-app.get("api/newContact/", controller.newContact);
+app.post("/api/newContact", controller.newContact);
 
 //Pour l'export dans Comon JS c'est pas comeme dans ES6
 export default app;
